@@ -18,8 +18,11 @@
 
 
 def verbing(s):
-    """Your code goes here.  Edit this docstring."""
-    return
+    if len(s) >= 3:
+        return str(s) + "ing"
+    elif s.endswith("ing") == True:
+        return str(s.replace(s[:3], "ly"))
+    
 
 
 # E. not_bad
