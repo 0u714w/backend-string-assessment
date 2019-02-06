@@ -39,12 +39,10 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-    word = "not that bad"
-    word2 = "not so bad"
-    if word in s:
-        return s.replace(word, 'good')
-    elif word2 in s:
-        return s.replace(word2, 'good')
+    word = s.find('not')
+    word2 = s.find('bad')
+    if word2 > word:
+        return s.replace(s[word:word2 + 3], 'good')
     else:
         return s
     
